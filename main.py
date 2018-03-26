@@ -1,3 +1,14 @@
+import time
+import base64
+import hashlib, hmac
+
+def bytes_to_int(bytes):
+    result = 0
+    for b in bytes:
+        result = result * 256 + int(b)
+
+    return result
+
 def get_auth_code(secret):
     t = int(time.time()/30)
     key = base64.b64decode(secret)

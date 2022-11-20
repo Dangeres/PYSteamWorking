@@ -24,7 +24,7 @@ def get_auth_code(secret):
     code = ''
     for i in range(5):
         code += fullcode[fc32%length]
-        fc32 //= lengt
+        fc32 //= length
     return code
     
 if __name__ == '__main__':
